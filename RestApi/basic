@@ -1,0 +1,9 @@
+  Api ---> Application Programing  Interface
+    Api--> connect frontend to  backend
+
+    frontend -----> API------> backend
+
+  Rest(REpresentational State Transfer) Api ---> some ruls to create api and perform CRUD  operation
+
+            CRUD operation ---> Create, Read, Update, Delete
+  

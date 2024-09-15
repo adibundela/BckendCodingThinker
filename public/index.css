@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    display:flexbox;
+    border: 2px solid black;
+    border-radius: 5%;
+    background: rgb(243, 151, 151);
+    
+}
+h2{
+    text-align: center;
+    font-size: larger;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+p{
+    font-size: larger;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
