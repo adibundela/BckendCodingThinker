@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <center> Read operation</center>
-    <% for(let i of comments ){ %>
-        <div>
-            <h2>  <%= i.id %>   </h3>
-            <p>   <%= i.username %>  </p>
-            <h4> <%= i.comment %> </h4>
-        </div>
-    <%} %>
+    <h2> Chat app</h2>
+    <ul id = "massages"> </ul>
+    <form id="form" action="">
+        <input id="input" type="text">
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+
+
+        const socket = io();
+        const massages = document.getElementById('massages');
+        const form = document.getElementById('form');
+        const input = document.getElementById('input');
+
+        
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            if(input.value.value){
+            socket.emit('chat message',input.value);
+            input.value='';
+            }
+        })
+
+        socket.on('chat message',(msg)=>{
+            const li = document.createElement('li');
+            li.textContent = msg;
+            massages.appendChild(li);
+        })
+
+
+
+
+    </script>
 </body>
 </html>
